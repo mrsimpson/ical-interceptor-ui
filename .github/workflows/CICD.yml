@@ -46,9 +46,7 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v1.3.0
         with:
-          # GitHub repository where assets will be deployed (default current)
-          repo: ical-interceptor
-          # Git branch where assets will be deployed
+          repo: mrsimpson/ical-interceptor
           target_branch: gh-pages
           build_dir: build
           fqdn: ical.no-panic.org
