@@ -1,0 +1,87 @@
+.App {
+  text-align: center;
+  padding: 50px;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+
+:root {
+
+  --input-color: rgb(52, 53, 58);
+  --input-border: #CDD9ED;
+  --input-background: #fff;
+  --input-placeholder: #CBD1DC;
+
+  --input-border-focus: #275EFE;
+
+  --group-color: var(--input-color);
+  --group-border: var(--input-border);
+  --group-background: #EEF4FF;
+
+  --group-color-focus: #fff;
+  --group-border-focus: var(--input-border-focus);
+  --group-background-focus: #678EFE;
+
+}
+
+.form-field {
+  display: block;
+  width: 100%;
+  padding: 8px 16px;
+  line-height: 25px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: inherit;
+  border-radius: 6px;
+  -webkit-appearance: none;
+  color: var(--input-color);
+  border: 1px solid var(--input-border);
+  background: var(--input-background);
+  transition: border .3s ease;
+  &::placeholder {
+      color: var(--input-placeholder);
+  }
+  &:focus {
+      outline: none;
+      border-color: var(--input-border-focus);
+  }
+}
+
+
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: inherit;
+  &:before,
+  &:after {
+      box-sizing: inherit;
+  }
+}
+
+// Center
+body {
+  min-height: 100vh;
+  font-family: 'Mukta Malar', Arial;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #F5F9FF;  
+}
