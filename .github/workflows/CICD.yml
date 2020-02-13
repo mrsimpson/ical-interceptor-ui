@@ -49,4 +49,4 @@ jobs:
           repo: mrsimpson/ical-interceptor
           target_branch: gh-pages
           build_dir: build
-          fqdn: ical.no-panic.org
+          #fqdn: ical.no-panic.org
