@@ -1,7 +1,7 @@
 const fetch = require('node-fetch')
 const ical = require('ical.js')
 
-async function readJcalFromUrl(url) {
+export default async function readJcalFromUrl(url) {
     let jCal  
     try {
         const resource = await fetch(url)
@@ -16,5 +16,3 @@ async function readJcalFromUrl(url) {
 
     return jCal
 }
-
-module.exports = readJcalFromUrl
