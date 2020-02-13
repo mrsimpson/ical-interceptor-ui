@@ -103,4 +103,7 @@ dist
 # TernJS port file
 .tern-port
 
+# Create-React-app
+build
+
 .DS_Store
