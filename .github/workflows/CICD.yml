@@ -18,12 +18,26 @@ jobs:
         npm run test
     - run: |
         npm run build
+    - name: Upload build
+      uses: actions/upload-artifact@v1.0.0
+      with:
+        # Artifact name
+        name: Build
+        # Directory containing files to upload
+        path: build
 
   deploy:
     needs: [build]
     
     runs-on: [linux]
     steps:
+      - name: Download build
+        uses: actions/download-artifact@v1.0.0
+        with:
+          # Artifact name
+          name: Build
+          # Destination path
+          path: build
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v1.3.0
         with:
