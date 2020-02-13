@@ -1,0 +1,33 @@
+name: CI
+
+on: 
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - run: |
+        npm run test
+    - run: |
+        npm run build
+
+  deploy:
+    needs: [build]
+    
+    runs-on: [linux]
+    steps:
+      - name: Deploy to GitHub Pages
+        uses: crazy-max/ghaction-github-pages@v1.3.0
+        with:
+          # GitHub repository where assets will be deployed (default current)
+          repo: ical-interceptor
+          # Git branch where assets will be deployed
+          target_branch: gh-pages
+          build_dir: build
+          fqdn: ical.no-panic.org
