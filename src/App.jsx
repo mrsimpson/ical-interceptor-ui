@@ -1,7 +1,8 @@
 import React from 'react';
-import './App.scss';
 import CalendarPreview from './CalendarPreview'
 import IcalSource from './IcalSource'
+
+import './App.scss';
 
 class App extends React.Component {
   constructor(props) {

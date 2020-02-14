@@ -9,7 +9,7 @@ import readJcalFromUrl from './readJcalFromUrl'
 import retrieveEvents from './retrieveEvents'
 import mapJcalToFullCalendarEvents from './mapJcalToFullCalendarEvents'
 
-import './calendar.scss'
+import './CalendarPreview.scss'
 
 export default class CalendarPreview extends React.Component {
 
