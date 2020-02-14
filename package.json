@@ -1,7 +1,7 @@
 {
   "name": "calendar-ui",
   "version": "0.1.0",
-  "homepage": "https://mrsimpson.github.io/ical-interceptor",
+  "homepage": "https://ical.no-panic.org/ical-interceptor",
   "dependencies": {
     "@fullcalendar/core": "^4.1.0",
     "@fullcalendar/daygrid": "^4.1.0",
