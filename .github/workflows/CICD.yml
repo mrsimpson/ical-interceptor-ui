@@ -43,6 +43,14 @@ jobs:
           name: Build
           # Destination path
           path: build
+      - name: Generate .env
+        uses: TickX/var-to-dotenv@v1.1.2
+        with:
+          key: BACKEND_URL
+          value: ${{ secrets.BACKEND_URL }}
+          default: "https://mrsimpson.o6s.io/ical-interceptor"
+          nullable: false
+          envPath: .env
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v1.3.0
         with:
