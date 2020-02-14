@@ -50,7 +50,7 @@ jobs:
           value: ${{ secrets.BACKEND_URL }}
           default: "https://mrsimpson.o6s.io/ical-interceptor"
           nullable: false
-          envPath: .env
+          envPath: build/.env
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v1.3.0
         with:
